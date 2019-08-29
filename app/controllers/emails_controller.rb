@@ -4,6 +4,11 @@ class EmailsController < ApplicationController
     @email = Email.all
   end
 
+  def show
+    @email = Email.find(params[:id])
+  end
+
+
   def create
     @email = Email.new(object:Faker::Lorem.sentence, body:Faker::Lorem.paragraph)
     if @email.save

@@ -9,13 +9,18 @@
         <div class="card-title">
           <ul id="email-list">
           <% @email.each do |email|  %>
-            <p><%= email.object %><br><%= email.body %><p>
+            <p><%= email.object%><p>
+              <%=link_to "Afficher l'email", email_path(email), remote: true%><br>
           <% end %>
           </ul>
         </div>
     </div>
       <div class="col-6 border">
         <h2 class="border">Emails sélectionnés</h2>
+        <ul id="email-selected">
+
+        </ul>
       </div>
-      <div class="w-100"></div>
+  </div>
+<div class="w-100"></div>
   </div>
