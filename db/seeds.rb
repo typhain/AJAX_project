@@ -22,5 +22,5 @@ Email.destroy_all
 
 
   3.times do
-    my_email = Email.create(object:Faker::Lorem.sentence, body:Faker::Lorem.paragraph)
+    my_email = Email.create(object:Faker::Lorem.sentence, body:Faker::Lorem.paragraph, read:false)
   end

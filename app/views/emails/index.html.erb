@@ -10,12 +10,8 @@
           <div class="card-title mt-5">
             <ul id="email-list">
             <% @emails.each do |email|  %>
-              <div class= "container" id="<‰=@email.id‰>">
-                <h3>Email n°<%= email.id%><br>Object: <%= email.object%></h3>
-                  <%=link_to "Sélectionner l'email", email_path(email), remote: true%><br>
-                <p><%= email.body%><p>
-              </div>
-                <% end %>
+            <%= render "body", email: email%>
+            <% end %>
             </ul>
           </div>
         </div>

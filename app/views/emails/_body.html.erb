@@ -1,6 +1,9 @@
-<div class = "container">
-<h3 id="<%= email.id%>">Email n°<%= email.id%><br>
+<div class = "container" id="<%=email.id%>">
+<h3>Email n°<%= email.id%><br>
   Object: <%= email.object%><br></h3>
   <p><%=link_to "Sélectionner l'email", email_path(email), remote: true%><p>
-  <p>Body : <%= email.object%><p>
+  <p>Body : <%= email.body%><p>
+    <% if email.read == true%>
+    <span class="badge badge-info mt-3">Email lu</span>
+    <%end%>
 </div>

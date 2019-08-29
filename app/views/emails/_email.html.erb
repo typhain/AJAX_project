@@ -1,3 +1,8 @@
-<h3>Body</h3><br><p><%=@email.body%><p>
-<p><%= link_to "Supprimer", email_path(email), class: "btn btn-danger", method: :delete, remote: true%><p>
-<p><%= link_to "Marquer comme lu", emails_path, class: "btn btn-success", method: :post, remote: true%><p>
+<h4>Body du mail n°<%=@email.id%></h4>
+<div class = "container d-flex justify-content-around">
+  <p class = "border"><%=@email.body%><p>
+</div>
+<div class = "container d-flex justify-content-around">
+  <p><%= link_to "Supprimer", email_path(@email), class: "btn btn-danger", method: :delete, remote: true%><p>
+  <p><%= link_to "Marquer comme non lu", email_path(email), class: "btn btn-success", method: :delete, remote: true%><p>
+</div>
