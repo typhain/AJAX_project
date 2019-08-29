@@ -1,1 +1,1 @@
-document.getElementById("email-selected").insertAdjacentHTML("beforeend", "<%= j render 'email', email: @email.body %>")
+document.getElementById("email-selected").innerHTML = "<%= j render 'email', email: @email %>"

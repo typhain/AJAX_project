@@ -5,23 +5,22 @@
 
   <div class="container d-flex flex-row">
     <div class="col-6 border">
-      <h2 class="border">Liste des emails</h2>
-        <div class="card-title">
+      <h2 class="text-center mt-3">Liste des emails</h2>
+        <div class="card-title mt-5">
           <ul id="email-list">
           <% @email.each do |email|  %>
-            <h3>Object: <%= email.object%></h3>
+            <h3>Email n°<%= email.id%><br>Object: <%= email.object%></h3>
               <%=link_to "Sélectionner l'email", email_path(email), remote: true%><br>
             <p><%= email.body%><p>
-              <%= link_to "Supprimer", emails_path, class: "btn btn-danger", remote: true, method: :post%><br>
-              <%= link_to "Marquer comme lu", emails_path, class: "btn btn-success mt-3", remote: true, method: :post%><br>
           <% end %>
           </ul>
         </div>
     </div>
-      <div class="col-6 border">
-        <h2 class="border">Emails sélectionnés</h2>
-        <ul id="email-selected">
-
+      <div class="col-6 border pb-5">
+        <h2 class="text-center mt-3">Emails sélectionnés</h2>
+        <div class="card-title mt-5">
+          <ul id="email-selected">
+            <h3>Body</h3><br><p>Aucun email selectionné<p>
         </ul>
       </div>
   </div>
