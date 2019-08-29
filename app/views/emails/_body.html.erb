@@ -3,7 +3,11 @@
   Object: <%= email.object%><br></h3>
   <p><%=link_to "Sélectionner l'email", email_path(email), remote: true%><p>
   <p>Body : <%= email.body%><p>
-    <% if email.read == true%>
-    <span class="badge badge-info mt-3">Email lu</span>
+
+    <% if email.read == false%>
+    <span id = "unread<%email.id%>" class="badge badge-info mt-3">Email non lu</span>
+    <%else%>
+    <span id = "unread<%email.id%>" class="badge badge-info mt-3">Email lu</span>
     <%end%>
+
 </div>

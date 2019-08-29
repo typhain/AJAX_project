@@ -1,1 +1,2 @@
 document.getElementById("email-selected").innerHTML = "<%= j render 'email', email: @email %>"
+document.getElementById("unread<%@email.id%>").remove()

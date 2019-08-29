@@ -33,5 +33,10 @@ class EmailsController < ApplicationController
     end
   end
 
+  def update
+    @email = Email.find(params[:id])
+    @email.update(read: false)
+  end
+
 
 end

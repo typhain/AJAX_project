@@ -4,5 +4,5 @@
 </div>
 <div class = "container d-flex justify-content-around">
   <p><%= link_to "Supprimer", email_path(@email), class: "btn btn-danger", method: :delete, remote: true%><p>
-  <p><%= link_to "Marquer comme non lu", email_path(email), class: "btn btn-success", method: :delete, remote: true%><p>
+  <p><%= link_to "Marquer comme non lu", email_path(email), class: "btn btn-success", method: :patch, remote: true%><p>
 </div>
