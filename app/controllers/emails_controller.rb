@@ -1,7 +1,7 @@
 class EmailsController < ApplicationController
 
   def index
-    @email = Email.all
+    @emails = Email.all
   end
 
   def show
@@ -25,7 +25,10 @@ class EmailsController < ApplicationController
 
   def destroy
     @email = Email.find(params[:id])
-    redirect_to root_path
+    respond_to do |format|
+     format.html { redirect_to root_path }
+     format.js { }
+    end
   end
 
 

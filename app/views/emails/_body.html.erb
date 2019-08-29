@@ -1,0 +1,6 @@
+<div class = "container">
+<h3 id="<%= email.id%>">Email n°<%= email.id%><br>
+  Object: <%= email.object%><br></h3>
+  <p><%=link_to "Sélectionner l'email", email_path(email), remote: true%><p>
+  <p>Body : <%= email.object%><p>
+</div>

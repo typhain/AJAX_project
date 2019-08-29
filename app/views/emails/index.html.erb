@@ -1,19 +1,23 @@
 <h1 class="text-center">Emails</h1><br>
-<div class="container mb-4">
-<%= link_to "Recevoir un email", emails_path, class: "btn btn-info", remote: true, method: :post%>
+<div class="container mb-4 d-flex justify-content-center">
+<a class="btn btn-primary w-50 " <%= link_to "Recevoir email", emails_path, method: :post, remote: true %></a>
 </div>
 
   <div class="container d-flex flex-row">
     <div class="col-6 border">
       <h2 class="text-center mt-3">Liste des emails</h2>
-        <div class="card-title mt-5">
-          <ul id="email-list">
-          <% @email.each do |email|  %>
-            <h3>Email n°<%= email.id%><br>Object: <%= email.object%></h3>
-              <%=link_to "Sélectionner l'email", email_path(email), remote: true%><br>
-            <p><%= email.body%><p>
-          <% end %>
-          </ul>
+        <div class= "card-body">
+          <div class="card-title mt-5">
+            <ul id="email-list">
+            <% @emails.each do |email|  %>
+              <div class= "container" id="<‰=@email.id‰>">
+                <h3>Email n°<%= email.id%><br>Object: <%= email.object%></h3>
+                  <%=link_to "Sélectionner l'email", email_path(email), remote: true%><br>
+                <p><%= email.body%><p>
+              </div>
+                <% end %>
+            </ul>
+          </div>
         </div>
     </div>
       <div class="col-6 border pb-5">
